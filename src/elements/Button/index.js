@@ -1,7 +1,7 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Button(props) {
   const className = [props.className];
@@ -48,14 +48,14 @@ export default function Button(props) {
       );
     } else {
       return (
-        <NavLink
+        <Link
           to={props.href}
           className={className.join(" ")}
           style={props.style}
           onClick={onClick}
         >
           {props.children}
-        </NavLink>
+        </Link>
       );
     }
   }
